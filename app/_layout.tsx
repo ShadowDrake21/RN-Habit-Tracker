@@ -6,12 +6,14 @@ import { TamaguiProvider } from 'tamagui';
 
 import config from '../tamagui.config';
 
+import { colors } from '~/constants/colors.contants';
+
 SplashScreen.preventAutoHideAsync();
 
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(drawer)',
-};
+// export const unstable_settings = {
+//   // Ensure that reloading on `/modal` keeps a back button present.
+//   initialRouteName: '(drawer)',
+// };
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -31,7 +33,7 @@ export default function RootLayout() {
     <TamaguiProvider config={config}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <Stack>
-          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+          <Stack.Screen name="index" options={{ title: 'Onboarding', headerShown: false }} />
           <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ title: 'Modal', presentation: 'modal' }} />
         </Stack>
