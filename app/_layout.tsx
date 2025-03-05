@@ -32,7 +32,12 @@ export default function RootLayout() {
   return (
     <TamaguiProvider config={config}>
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <Stack>
+        <Stack
+          screenOptions={{
+            contentStyle: {
+              backgroundColor: colors.background,
+            },
+          }}>
           <Stack.Screen name="index" options={{ title: 'Onboarding', headerShown: false }} />
           <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ title: 'Modal', presentation: 'modal' }} />

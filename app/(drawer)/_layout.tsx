@@ -1,13 +1,23 @@
 import { FontAwesome, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { DefaultTheme } from '@react-navigation/native';
 import { Link } from 'expo-router';
 import { Drawer } from 'expo-router/drawer';
 
 import { HeaderButton } from '../../components/HeaderButton';
+
+import { colors } from '~/constants/colors.contants';
 const DrawerLayout = () => {
   return (
-    <Drawer>
+    <Drawer
+      screenOptions={{
+        headerShadowVisible: false,
+        headerStyle: { backgroundColor: DefaultTheme.colors.background },
+        headerTitleStyle: {
+          fontSize: 20,
+        },
+      }}>
       <Drawer.Screen
         name="index"
         options={{
