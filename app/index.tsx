@@ -1,10 +1,12 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { StyleSheet, useWindowDimensions } from 'react-native';
+import { StyleSheet, useWindowDimensions, LogBox } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, H1, Image, SizableText, YStack } from 'tamagui';
 
 import { colors } from '~/constants/colors.contants';
+
+LogBox.ignoreLogs(['Warning: ExpandableCalendar:']);
 
 const Page = () => {
   const router = useRouter();
@@ -49,5 +51,3 @@ const Page = () => {
 };
 
 export default Page;
-
-const styles = StyleSheet.create({});

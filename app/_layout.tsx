@@ -41,6 +41,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{ title: 'Onboarding', headerShown: false }} />
           <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ title: 'Modal', presentation: 'modal' }} />
+          <Stack.Screen name="habit/[id]" />
         </Stack>
       </GestureHandlerRootView>
     </TamaguiProvider>

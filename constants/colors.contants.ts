@@ -16,3 +16,26 @@ export const colors = {
   secondaryButton: '#A8D1D1',
   secondaryButtonText: '#333',
 };
+
+export const habitsProgressStyles = {
+  completed: {
+    bg: '#FFC107',
+    color: '#FFF',
+    border: '#EECC7A',
+  },
+  partiallyCompleted: {
+    bg: '#a68e55',
+    color: '#d6b76d',
+    border: '#d6b76d',
+  },
+  notCompleted: {
+    bg: '#8E7A49',
+    color: '#77663d',
+    border: '#77663d',
+  },
+  disable: {
+    bg: '#40464e',
+    color: '#111822',
+    border: '#111822',
+  },
+};
