@@ -15,6 +15,7 @@ export const colors = {
   primaryButtonText: '#FFFFFF',
   secondaryButton: '#A8D1D1',
   secondaryButtonText: '#333',
+  tintColor: '#000',
 };
 
 export const habitsProgressStyles = {

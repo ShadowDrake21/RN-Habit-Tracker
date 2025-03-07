@@ -12,11 +12,7 @@ const DrawerLayout = () => {
   return (
     <Drawer
       screenOptions={{
-        headerShadowVisible: false,
         headerStyle: { backgroundColor: DefaultTheme.colors.background },
-        headerTitleStyle: {
-          fontSize: 20,
-        },
       }}>
       <Drawer.Screen
         name="index"
