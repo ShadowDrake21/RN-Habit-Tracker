@@ -21,6 +21,7 @@
     "@tamagui/react-native-media-driver": "^1.125.8",
     "@tamagui/shorthands": "^1.125.8",
     "@tamagui/themes": "^1.125.8",
+    "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "drizzle-orm": "^0.40.0",
     "expo": "^52.0.37",

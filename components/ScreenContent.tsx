@@ -2,6 +2,8 @@ import { YStack, H2, Separator, Theme } from 'tamagui';
 
 import { EditScreenInfo } from './EditScreenInfo';
 
+import { colors } from '~/constants/colors.contants';
+
 type ScreenContentProps = {
   title: string;
   path: string;

@@ -1,11 +1,15 @@
+import { useRouter } from 'expo-router';
 import React from 'react';
-import { StyleSheet, useWindowDimensions } from 'react-native';
+import { StyleSheet, useWindowDimensions, LogBox } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, H1, Image, SizableText, YStack } from 'tamagui';
 
 import { colors } from '~/constants/colors.contants';
 
+LogBox.ignoreLogs(['Warning: ExpandableCalendar:']);
+
 const Page = () => {
+  const router = useRouter();
   const { width } = useWindowDimensions();
   const { top, bottom } = useSafeAreaInsets();
 
@@ -23,18 +27,22 @@ const Page = () => {
         style={{ width: width - 20, height: width - 20 }}
         objectFit="contain"
       />
-      <YStack gap={20} width="100%">
-        <H1 color={colors.primaryText} fontSize={32} textAlign="center" fontWeight={700}>
-          Build Better Habits, One Step at a Time
-        </H1>
-        <SizableText color={colors.secondaryText} fontSize={18} textAlign="center">
-          Track progress, stay motivated, and create lasting routines effortlessly.
-        </SizableText>
+      <YStack justifyContent="space-between" flex={1} width="100%">
+        <YStack gap={20}>
+          <H1 color={colors.primaryText} fontSize={32} textAlign="center" fontWeight={700}>
+            Build Better Habits, One Step at a Time
+          </H1>
+          <SizableText color={colors.secondaryText} fontSize={18} textAlign="center">
+            Track progress, stay motivated, and create lasting routines effortlessly.
+          </SizableText>
+        </YStack>
         <Button
           size="$6"
           backgroundColor={colors.primaryButton}
           color={colors.primaryButtonText}
-          width="100%">
+          width="100%"
+          fontWeight={700}
+          onPress={() => router.replace('/(drawer)')}>
           Get Started
         </Button>
       </YStack>
@@ -43,5 +51,3 @@ const Page = () => {
 };
 
 export default Page;
-
-const styles = StyleSheet.create({});
