@@ -2,7 +2,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Feather from '@expo/vector-icons/Feather';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFonts } from 'expo-font';
-import { Stack, SplashScreen } from 'expo-router';
+import { Stack, SplashScreen, useRouter } from 'expo-router';
 import React, { useEffect } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TamaguiProvider, XStack } from 'tamagui';
@@ -19,6 +19,8 @@ SplashScreen.preventAutoHideAsync();
 // };
 
 export default function RootLayout() {
+  const router = useRouter();
+
   const [loaded] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
@@ -53,8 +55,17 @@ export default function RootLayout() {
             name="habit/[id]"
             options={{
               headerBackVisible: false,
+              headerStyle: {
+                backgroundColor: colors.background,
+              },
+              headerTitleAlign: 'left',
               headerLeft: ({ tintColor }) => (
-                <Entypo name="chevron-thin-left" size={24} color="black" />
+                <Entypo
+                  name="chevron-thin-left"
+                  size={24}
+                  color={tintColor}
+                  onPress={() => router.back()}
+                />
               ),
               headerRight: ({ tintColor }) => (
                 <XStack gap={20}>
