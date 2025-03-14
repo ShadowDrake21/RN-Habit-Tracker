@@ -11,6 +11,7 @@ export const colors = {
   placeholder: '#999',
   accentText: '#FFD369',
   errorText: '#FF6B6B',
+  cancelButton: '#FF0000',
   successText: '#4CAF50',
   primaryButton: '#6366F1',
   primaryButtonText: '#FFFFFF',
