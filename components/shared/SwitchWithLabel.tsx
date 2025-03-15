@@ -8,7 +8,7 @@ export const SwitchWithLabel = (props: {
   defaultChecked?: boolean;
 }) => {
   const { size, title, defaultChecked } = props;
-  const id = `switch-${props.size.toString().slice(1)}-${props.defaultChecked ?? ''}}`;
+  const id = `switch-${props.size.toString().slice(1)}-${props.defaultChecked ?? ''}${title ?? ''}`;
   return (
     <XStack alignItems="center" gap="$4">
       {title && (

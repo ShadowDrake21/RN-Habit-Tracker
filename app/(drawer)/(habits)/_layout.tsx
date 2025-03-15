@@ -1,8 +1,10 @@
-import { Tabs } from 'expo-router';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { TabBarIcon } from '~/components/TabBarIcon';
 import Entypo from '@expo/vector-icons/Entypo';
 import Feather from '@expo/vector-icons/Feather';
+import { Tabs } from 'expo-router';
+
+import { TabBarIcon } from '~/components/TabBarIcon';
+import { colors } from '~/constants/colors.contants';
 
 export default function TabLayout() {
   return (
